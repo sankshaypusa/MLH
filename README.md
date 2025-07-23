@@ -6,6 +6,7 @@ This project focuses on predicting Ejection Fraction (EF) — a critical clinica
 The core idea is to extract rich spatiotemporal embeddings using VideoMAE (a masked autoencoder for video data), enrich these embeddings using a frozen BART encoder, and train a multi-layer ReLU-based regressor to predict the EF. A Retrieval-Augmented Generation (RAG) style approach is employed, where for every test video, its most similar training samples are retrieved using cosine similarity, and the regressor is locally fine-tuned using only those neighbors. This makes the model personalized, efficient, and more robust to small datasets.
 
 🔄 Step-by-Step Procedure
+
 🔹 Step 1: Dataset Preparation
 Begin with the EchoNet-Dynamic dataset, which contains thousands of echocardiographic videos labeled with EF values. You should organize the dataset as follows:
 
